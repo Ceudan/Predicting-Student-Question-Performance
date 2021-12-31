@@ -11,7 +11,7 @@ Data contains the responses of 542 students to 1774 diagnostic questions (respon
 
 ## Architecture
 Steps:
-1. Main dataset is submsampled into bags.
+1. Main dataset is subsampled into bags.
 2. ML algorithms are run on each bag.
 3. Output per algorithm is equally weighted per bags.
 4. Final model output is an adjustably weighted mean of algorithms.
