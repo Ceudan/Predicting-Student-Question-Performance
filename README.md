@@ -11,4 +11,4 @@ Data contains the responses of 542 student's to 1774 diagnostic questions (respo
 
 ## Architecture
 
-![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.PNG)
+![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
