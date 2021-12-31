@@ -23,7 +23,7 @@ The motivation behind this section lies is explained by bias-variance. The expec
 
 ![Image of Equation showing Expected Squared error decomposed into bias, varience of y, and variance of t](images/bias_variance.png)
 
-Y represents the output of our model, while T represents the correct label. Y and T are random variables, with uncertaintly in Y coming from our choice of input data, and uncertainty in T coming from theinaccuracies in the labelling process.
+Y represents the output of our model, while T represents the correct label. Y and T are random variables, with uncertaintly in Y coming from our choice of input data, and uncertainty in T coming from inaccuracies in the labelling process.
 
 ### K-Nearest Neighbors
 
