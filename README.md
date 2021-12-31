@@ -10,7 +10,7 @@ Data contains the responses of 542 students to 1774 diagnostic questions (respon
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/sparse_matrix.PNG)
 
 ## Architecture
-Our mode contains the following steps:
+Steps:
 1. Main dataset is submsampled into bags.
 2. ML algorithms are run on each bag.
 3. Output per algorithm is equally weighted per bags.
