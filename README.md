@@ -19,7 +19,7 @@ Steps:
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
 
 ### Ensemble and Bagging
-
+The motivation behind this section lies is explained by bias-variance. The expected squared error loss, can be broken down into the following terms.
 ### K-Nearest Neighbors
 
 ### Item Response Theory
