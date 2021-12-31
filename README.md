@@ -13,7 +13,7 @@ Data contains the responses of 542 students to 1774 diagnostic questions (respon
 Our mode contains the following steps:
 1. Main dataset is submsampled into bags.
 2. ML algorithms are run on each bag.
-3. Output per algorithm is equally weighted across bags.
-4. Final model output is an adjustably weighted mean across algorithms.
+3. Output per algorithm is equally weighted per bags.
+4. Final model output is an adjustably weighted mean of algorithms.
 
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
