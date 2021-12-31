@@ -17,3 +17,15 @@ Steps:
 4. Final model output is an adjustably weighted mean of algorithms.
 
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
+
+### Ensemble and Bagging
+
+### K-Nearest Neighbors
+
+### Item Response Theory
+
+### Autoencoder
+
+## Results
+
+## Improvements 
