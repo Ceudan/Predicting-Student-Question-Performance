@@ -12,7 +12,8 @@ Data contains the responses of 542 students to 1774 diagnostic questions (respon
 ## Architecture
 Our mode contains the following steps:
 1. Main dataset is submsampled into bags.
-2. Each ML algorithm is trained and ran on each bag, with output being the mean.
-3. Final model output is weighted mean across each algorithm.
+2. ML algorithms are run on each bag.
+3. Output per algorithm is equally weighted across bags.
+4. Final model output is an adjustably weighted mean across algorithms.
 
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
