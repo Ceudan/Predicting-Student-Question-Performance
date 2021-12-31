@@ -20,6 +20,9 @@ Steps:
 
 ### Ensemble and Bagging
 The motivation behind this section lies is explained by bias-variance. The expected squared error loss, can be broken down into the following terms.
+
+![Image of Equation showing Expected Squared error decomposed into bias, varience of y, and variance of t](images/bias_variance.png)
+
 ### K-Nearest Neighbors
 
 ### Item Response Theory
