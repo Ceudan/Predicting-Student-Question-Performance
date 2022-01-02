@@ -63,7 +63,7 @@ Our goal is to get the Autoencoder to learn useful compressed features of a stud
 #### Hyperparameters
 Hyperparameters were tuned on validation accuracy. The final model is shown below.
 
-![Plot of KNN accuracies vs K-value](images/Autoencoder.png)
+![Plot of KNN accuracies vs K-value](images/autoencoder.png)
 
 ## Results
 
