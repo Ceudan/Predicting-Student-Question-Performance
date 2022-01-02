@@ -33,11 +33,12 @@ Var(t), or the Bayes error, cannot be improved in our situation.
 
 The bias is reduced via the ensemble. Inuitively we are averaging out the biases or incapabilities of each algorithm when trying to represent our desired function.
 
-Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n random variables yi with the same covariance σ2 and correlation p is:
+Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n random variables with the same variances σ2 and correlations p is:
 
 ![Image of equation showing variance of the mean of N random variables as a function of N and their correlation](images/var_of_mean.PNG)
 
-Inuitively this makes sense. If our bags are perfectly identical (p = 1), then our outputs are identical and we receive no variance reduction benefits. If our bags are completely independant (p = 0) we receive the full variance reduction benefits.
+Inuitively this makes sense. If our bags are perfectly identical (p = 1), then our outputs are identical and we receive no variance reduction benefits. If our bags are completely independant (p = 0) we receive the full variance reduction benefits. Therefore our goal is to decorrelate our bags as much as possible. Because our dataset is limited, we are forced to reuse the same data. We can still make the datasets uncorrelated by having some bags focus on different areas of our data. This can be done by either emmitting some data (size of bags are less than size of total dataset), or making some datapoints have heavier weights during training (bagging with replacement, boosting etc).
+
 
 #### Hyperparameters
 
