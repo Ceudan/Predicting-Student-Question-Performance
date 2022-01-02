@@ -31,7 +31,13 @@ Y represents the output of our model, while T represents the correct label. Y an
 
 Var(t), or the Bayes error, cannot be improved in our situation.
 
-The bias term
+The bias is reduced via the ensemble. Inuitively we are averaging out the biases or incapabilities of each algorithm when trying to represent our desired function.
+
+Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n random variables yi with the same covariance σ2 and correlation p is:
+
+![Image of equation showing variance of the mean of N random variables as a function of N and their correlation](images/var_of_mean.png)
+
+Inuitively this makes sense. If our bags are perfectly identical (p = 1), then our outputs are identical and we receive no variance reduction benefits. If our bags are completely independant (p = 0) we receive the full variance reduction benefits.
 
 #### Hyperparameters
 
