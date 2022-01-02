@@ -53,8 +53,20 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 ![Plot of KNN accuracies vs K-value](images/KNN_optimization.png)
 
 ### Item Response Theory
+#### Theory
+#### Hyperparameters
 
 ### Autoencoder
+#### Theory
+By compressing and decompressing data into a smaller dimension, you force the autencoder to learn useful features. Knowledge of these useful features can then be used to predict never seen before data. Our loss was mean squared error of the reconstruction. Hyperparameters were tuned on validation data.
+
+#### Hyperparameters
+We empirally tested a great variety of hyperparameters. Some of the important stages are shown below.
+|                                        Hyperparameters                                       | Valid Accuracy |
+|:----------------------------------------------------------------------------------------------------------:|:--------------:|
+| (2-Layered)\  Autoencoder (Sigmoid)  Decoder (Sigmoid)                                                  |      0.683     |
+| Neural Network (4-Layered) Autoencoder (Sigmoid) Autoencoder (Sigmoid) Decoder (Sigmoid) Decoder (Sigmoid) |      0.632     |
+| Neural Network (4-Layered) Autoencoder (ReLU) Autoencoder (ReLU) Decoder (Sigmoid) Decoder (Sigmoid)       |      0.695     |
 
 ## Results
 
