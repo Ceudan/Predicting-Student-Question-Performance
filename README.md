@@ -19,6 +19,8 @@ Steps:
 ![image of sparese matrix representation of data. Rows = num students, columns = num questions](images/Architecture.png)
 
 ### Ensemble and Bagging
+
+#### Theory
 The motivation behind this section lies is explained by bias-variance. The expected squared error loss, can be broken down into the following terms.
 
 ![Image of Equation showing Expected Squared error decomposed into bias, varience of y, and variance of t](images/bias_variance.png)
@@ -26,6 +28,12 @@ The motivation behind this section lies is explained by bias-variance. The expec
 Y represents the output of our model, while T represents the correct label. Y and T are random variables, with uncertaintly in Y mostly coming from our choice of train data, and uncertainty in T coming from inaccuracies in the labelling process. Below is a visualization for a 1 dimensional output.
 
 ![Image of 2 labelled bell curves, 1 for Y and another for T](images/bias_variance_plot.png)
+
+Var(t), or the Bayes error, cannot be improved in our situation.
+
+The bias term
+
+#### Hyperparameters
 
 ### K-Nearest Neighbors
 
