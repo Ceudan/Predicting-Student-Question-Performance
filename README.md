@@ -50,7 +50,7 @@ K nearest neighbors
 #### Hyperparameters
 We found an optimal K-value of 11 when imputing by student, and 21 when imputing by question.
 
-![Plot of KNN accuracies vs K-value](images/var_of_mean.PNG)
+![Plot of KNN accuracies vs K-value](images/KNN_optimization.PNG)
 
 ### Item Response Theory
 
