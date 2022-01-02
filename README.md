@@ -40,11 +40,17 @@ Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n r
 Inuitively this makes sense. If our bags are perfectly identical (p = 1), then our outputs are identical and we receive no variance reduction benefits. If our bags are completely independant (p = 0) we receive the full benefits. Therefore we should decorrelate our bags as much as possible. Because our main dataset is limited, we are forced to reuse the same data. We can still make the subsamples however uncorrelated by having some bags focus on different areas of our data. This can be done by either emmitting some data (size of bags are less than size of total dataset), or making some datapoints have heavier weights during training (bagging with replacement, boosting etc).
 
 #### Hyperparameters
-In the ensemble, we used a 
+For our ensemble, we found the algorithm specific weights using machine learning optimization via PyTorch's modules. Loss was MSE of the validation set. The optimal weights for KNN by user, KNN by question, IRT and Autencoder respectively were [0.04, 0.12, 0.65, 0.19]. 
 
-Through testing on validation data we found bags of size 0.6*N 
+For bagging, we empiraclly found an optimal bag size of size 0.6\*N. Due to the unique nature of training with sparse matrices, we were unable to  implement bagging with replacement or boosting in the alloted time. Neither were these features expected of us for the project.
 
 ### K-Nearest Neighbors
+#### Theory
+K nearest neighbors
+#### Hyperparameters
+We found an optimal K-value of 11 when imputing by student, and 21 when imputing by question.
+
+![Plot of KNN accuracies vs K-value](images/var_of_mean.PNG)
 
 ### Item Response Theory
 
