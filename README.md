@@ -58,15 +58,12 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 
 ### Autoencoder
 #### Theory
-By compressing and decompressing data into a smaller dimension, you force the autencoder to learn useful features. Knowledge of these useful features can then be used to predict never seen before data. Our loss was mean squared error of the reconstruction. Hyperparameters were tuned on validation data.
+Our goal is to get the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points). Validation and test accuracy is calculated by comparing their reconstructed points to the correct labels.
 
 #### Hyperparameters
-We empirally tested a great variety of hyperparameters. Some of the important stages are shown below.
-|                                        Hyperparameters                                       | Valid Accuracy |
-|:----------------------------------------------------------------------------------------------------------:|:--------------:|
-| (2-Layered)\  Autoencoder (Sigmoid)  Decoder (Sigmoid)                                                  |      0.683     |
-| Neural Network (4-Layered) Autoencoder (Sigmoid) Autoencoder (Sigmoid) Decoder (Sigmoid) Decoder (Sigmoid) |      0.632     |
-| Neural Network (4-Layered) Autoencoder (ReLU) Autoencoder (ReLU) Decoder (Sigmoid) Decoder (Sigmoid)       |      0.695     |
+Hyperparameters were tuned on validation accuracy. The final model is shown below.
+
+![Plot of KNN accuracies vs K-value](images/Autoencoder.png)
 
 ## Results
 
