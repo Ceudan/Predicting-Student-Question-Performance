@@ -46,7 +46,10 @@ For bagging, we empiraclly found an optimal bag size of size 0.6\*N. Due to the 
 
 ### K-Nearest Neighbors
 #### Theory
-K nearest neighbors
+The output of KNN is the the average of the K most similar training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily. Mathematically, our algorithm will compute the nan euclidean distance of the sparse matrix row of the query point, to all other rows. Nan dimensions are omitted from calculations, with the weights of the other dimensions scaled up appropriately. Imputation by question follows the same procedure but by columns.
+
+![Image of example calculation for nan euclidean distance](images/nan_distance.PNG)
+
 #### Hyperparameters
 We found an optimal K-value of 11 when imputing by student, and 21 when imputing by question.
 
@@ -61,7 +64,7 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 Our goal is to get the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points). Validation and test accuracy is calculated by comparing their reconstructed points to the correct labels.
 
 #### Hyperparameters
-Hyperparameters were tuned on validation accuracy. The final model is shown below.
+Hyperparameters were tuned on validation accuracy. Final model is shown below.
 
 ![Plot of KNN accuracies vs K-value](images/autoencoder.png)
 
