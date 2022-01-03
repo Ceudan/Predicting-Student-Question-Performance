@@ -56,12 +56,9 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 ![Plot of KNN accuracies vs K-value](images/KNN_optimization.png)
 
 ### Item Response Theory
-#### Theory
 This is a mathematical model that predicts a students performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. In training we sought to maximize the probability of data given the parameters P(D|θ, β). Optimization was done by manually adding the gradient of the parameters with respect to log[P(D|θ, β)].
 
 ![Image showing equations used in program](images/IRT_equations.PNG)
-
-#### Hyperparameters
 
 ### Autoencoder
 #### Theory
@@ -73,5 +70,8 @@ Hyperparameters were tuned on validation accuracy. Final model is shown below.
 ![Plot of KNN accuracies vs K-value](images/autoencoder.png)
 
 ## Results
+Below is the test accuracy of various models on 10,629 examples.
+
+![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/results.png)
 
 ## Improvements 
