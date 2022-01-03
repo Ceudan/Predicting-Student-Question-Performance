@@ -72,6 +72,6 @@ Hyperparameters were tuned on validation accuracy. Final model is shown below.
 ## Results
 Below is the test accuracy of various models on 10,629 examples.
 
-![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/results.png)
+![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/results.PNG)
 
 ## Improvements 
