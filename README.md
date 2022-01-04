@@ -83,6 +83,10 @@ Below is the test accuracy of various models on 10,629 examples.
 
 ![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/results.PNG)
 
+### Contest Results
+Using an old model, our team achieved a rank of 18th acorss all participating teams coursewide (over 300 students).
+Due to time constraints we were unable to our desired upgrades. After the contest was over we updated our model to its current version, and achieved an accuracy = 0.71275. This would have hypothetically corresponded to a rank of 5th place coursewide. 
+
 ## Improvements
 ### K-Nearest Neighbors
 Currently KNN performs a binary threshold on weights for each neighbor. I would explore libraries with adjustable weights that are negatively correlated to distance. A good example is performing a softmax on the negative distances, where β is an adjustable parameter. With large numbers of points, weights approximate the following plot.
