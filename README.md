@@ -52,7 +52,7 @@ For bagging, we empirically found an optimal bag size of size 0.6\*N. Due to the
 
 ### K-Nearest Neighbors
 #### Theory
-KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily, and average their response for that particular question. Mathematically, our algorithm will compute the nan euclidean distance of each sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
+KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily, and average their response for that particular question. Mathematically, our algorithm will compute the nan euclidean distance of every sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
 
 ![Image of example calculation for nan euclidean distance](images/nan_distance.PNG)
 
@@ -62,7 +62,7 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 ![Plot of KNN accuracies vs K-value](images/KNN_optimization.png)
 
 ### Item Response Theory
-This is a mathematical model that predicts a students performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. Our loss function is the negative probability of observing the train matrix given the parameters P(C|θ, β). Calculation of gradients and parameter updating was done manually.
+This is a mathematical model that predicts a student's performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. Our loss function is the negative probability of observing the train matrix given the parameters P(C|θ, β). Calculation of gradients and parameter updating was done manually.
 
 ![Image showing equations used in program](images/IRT_equations.PNG)
 
