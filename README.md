@@ -91,11 +91,10 @@ Currently KNN performs a binary threshold on weights for each neighbor. I would 
 ![plot of weight as function of negative exponential of distance](images/KNN_improvement.PNG)
 
 ## Attributions
-|    Algorithm    | Relative Weight |
-|:---------------:|:---------------:|
-| KNN by user     |       0.04      |
-| KNN by question |       0.12      |
-| IRT             |       0.65      |
-| Autoencoder     |       0.19      |
-
+|         Task         |     Assignee    |
+|:--------------------:|:---------------:|
+| KNN                  |       Mali      |
+| IRT                  |      Nassar     |
+| Autoencoder          |    Mercurius    |
+| Ensemble and Bagging | Mali/ Mercurius |
 
