@@ -52,7 +52,7 @@ For bagging, we empirically found an optimal bag size of size 0.6\*N. Due to the
 
 ### K-Nearest Neighbors
 #### Theory
-KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily. Mathematically, our algorithm will compute the nan euclidean distance of each sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
+KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily, and average their response for that particular question. Mathematically, our algorithm will compute the nan euclidean distance of each sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
 
 ![Image of example calculation for nan euclidean distance](images/nan_distance.PNG)
 
@@ -62,18 +62,18 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 ![Plot of KNN accuracies vs K-value](images/KNN_optimization.png)
 
 ### Item Response Theory
-This is a mathematical model that predicts a students performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. Our loss function is the negative probability of observing the train data given the parameters P(D|θ, β). Calculation of gradients and parameter updating was done manually.
+This is a mathematical model that predicts a students performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. Our loss function is the negative probability of observing the train matrix given the parameters P(C|θ, β). Calculation of gradients and parameter updating was done manually.
 
 ![Image showing equations used in program](images/IRT_equations.PNG)
 
 ### Autoencoder
 #### Theory
-Our goal is to get the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points). Validation and test accuracy is calculated by comparing their reconstructed points to the correct labels.
+We want the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points). Validation and test accuracy is calculated by comparing their reconstructed points to the correct labels.
 
 #### Hyperparameters
-Hyperparameters were tuned on validation accuracy. Final model is shown below.
+Final model is shown below.
 
-![Plot of KNN accuracies vs K-value](images/autoencoder.png)
+![Image of Autencoder accuracy](images/autoencoder.png)
 
 ## Results
 Below is the test accuracy of various models on 10,629 examples.
