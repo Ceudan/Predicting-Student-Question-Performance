@@ -68,7 +68,7 @@ This is a mathematical model that predicts a student's performance based on 2 pa
 
 ### Autoencoder
 #### Theory
-We want the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points). Validation and test accuracy is calculated by comparing their reconstructed points to the correct labels.
+We want the Autoencoder to learn useful compressed features of a student's response history that can be used to predict the student's performance on new questions. We train it by passing in a sparse matrix row, that is a 1774 unit long vector containing the responses of a single student. Our loss function is mean squared reconstruction error. Note that loss is not calculated for the held out data points (missing, valid or test points).
 
 ![Diagram explaining autoencoder training](images/Autoencoder_train.png)
 
