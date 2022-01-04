@@ -85,7 +85,9 @@ Below is the test accuracy of various models on 10,629 examples.
 
 ### Contest Results
 Using an old model, our team achieved a rank of 18th acorss all participating teams coursewide (over 300 students).
-Due to time constraints we were unable to our desired upgrades. After the contest was over we updated our model to its current version, and achieved an accuracy = 0.71275. This would have hypothetically corresponded to a rank of 5th place coursewide. 
+Due to time constraints we were unable to features listed in this article. After the contest was over we updated our model to its current version, with the hypothetical rank shown below.
+
+![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/contest_results.PNG)
 
 ## Improvements
 ### K-Nearest Neighbors
