@@ -33,7 +33,7 @@ Var(t), or the Bayes error, cannot be reduced in our situation.
 
 Bias is reduced via the ensemble. Averaging the random biases of distinct ML algorithms brings us closer to the correct label.
 
-Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n random variables with the same variances σ2 and correlations p is:
+Var(y) is reduced via bagging. According to Bienaymé's formula, the variance of the mean of n random variables each with the same variances σ2 and correlations p is:
 
 ![Image of equation showing variance of the mean of N random variables as a function of N and their correlation](images/var_of_mean.PNG)
 
@@ -48,11 +48,11 @@ For the ensemble, we found the algorithm specific weights using machine learning
 | IRT             |       0.65      |
 | Autoencoder     |       0.19      |
 
-For bagging, we empiraclly found an optimal bag size of size 0.6\*N. Due to the unique nature of training with sparse matrices, we were unable to  implement bagging with replacement or boosting in the alloted time. Neither were these features expected of us for the project.
+For bagging, we empirically found an optimal bag size of size 0.6\*N. Due to the unique nature of training with sparse matrices, we were unable to  implement bagging with replacement or boosting in the alloted time. Neither were these features expected of us for the project.
 
 ### K-Nearest Neighbors
 #### Theory
-The output of KNN is the the average of the K most similar training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily. Mathematically, our algorithm will compute the nan euclidean distance of the sparse matrix row of the query point, to all other rows. Nan dimensions are omitted from calculations, with the weights of the other dimensions scaled up appropriately. Imputation by question follows the same procedure but by columns.
+KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily. Mathematically, our algorithm will compute the nan euclidean distance of each sparse matrix row to the row of the query point. Rows mising the query question are ignored. Imputation by question follows the same procedure but by columns.
 
 ![Image of example calculation for nan euclidean distance](images/nan_distance.PNG)
 
