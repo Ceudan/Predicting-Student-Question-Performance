@@ -84,7 +84,7 @@ Below is the test accuracy of various models on 10,629 examples.
 
 ## Improvements
 ### K-Nearest Neighbors
-Currently KNN performs a binary threshold on weights for each neighbor. I would explore libraries with adjustable weights that are negatively correlated to distance. A good example is performing a softmax on the negative distances, where β is an adjustable parameter. With large numbers of points weights approximate the following function.
+Currently KNN performs a binary threshold on weights for each neighbor. I would explore libraries with adjustable weights that are negatively correlated to distance. A good example is performing a softmax on the negative distances, where β is an adjustable parameter. With large numbers of points weights approximate the following plot.
 
 ![plot of weight as function of negative exponential of distance](images/KNN_weight.PNG)
 
