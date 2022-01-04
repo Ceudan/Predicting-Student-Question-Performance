@@ -1,5 +1,5 @@
 # Predicting-Student-Question-Performance
-I led a team of 3 to write an ensemble machine learning model with bagging to predict whether a student can correctly anwser a diagnositic question. Our ensemble combined 3 distinct algorithms (K-Nearest Neighbors, Item-Response Theory, Autoencoder). Motivation was a course project. A generic guide was provided, however implementation details were done by the students.
+I led a team of 3 to write an ensemble machine learning model with bagging to predict whether a student can correctly anwser a diagnositic question. Our ensemble combined 3 distinct algorithms (K-Nearest Neighbors, Item-Response Theory, Autoencoder). Motivation was a course project. A generic guide was provided, however implementation details were left to the students.
 
 ## Background
 
@@ -37,7 +37,7 @@ Var(y) is reduced via bagging. According to Bienaymé's formula, the mean of n r
 
 ![Image of equation showing variance of the mean of N random variables as a function of N and their correlation](images/var_of_mean.PNG)
 
-If our bags are perfectly identical (p = 1), then our outputs are identical and we receive no variance reduction benefits. If our bags are completely independant (p = 0) we receive the full benefits. Because our main dataset is limited, we are forced to reuse the same data. However we can still deccorelate the subsamples by having some bags focus on different areas of the data. This can be done by either emmitting data (size of bags are less than size of total dataset), or overemphasizing some datapoints (bagging with replacement, boosting etc).
+We maximize the variance reduction benefit by using more bags and making them as independant as possible. Because our main dataset is limited, we have to reuse the same data. However we can still deccorelate the subsamples by having some bags focus on different areas of the data. This can be done by either emmitting data (size of bags are less than size of total dataset), or overemphasizing some datapoints (bagging with replacement, boosting etc).
 
 #### Hyperparameters
 For the ensemble, we found the algorithm specific weights using machine learning optimization via PyTorch modules. Loss was mean squared error of the validation set. 
