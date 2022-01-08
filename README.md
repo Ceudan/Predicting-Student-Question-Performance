@@ -87,7 +87,7 @@ Achieved a project mark of 97%. Below are test accuracies on 10,629 examples.
 Using an old model, our team achieved a rank of 18th across all participating teams coursewide (over 300 eligible students).
 Due to time constraints we were unable to implement all features listed in this article. After the contest was over we updated our model to its current version, with the hypothetical rank shown below.
 
-![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/contest_results.PNG)
+![Table of test accuracies for all submodels, main model, baseline and best model coursewide](images/model_improvements.PNG)
 
 ## Improvements
 ### K-Nearest Neighbors
