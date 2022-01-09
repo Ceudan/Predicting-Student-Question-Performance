@@ -34,7 +34,7 @@ Var(t), or the Bayes error, cannot be reduced in our situation.
 
 Bias is reduced via the ensemble. Averaging the random biases of distinct ML algorithms brings us closer to the correct label.
 
-Var(y) is reduced via bagging. According to Bienaymé's formula, the variance of the mean of n random variables each with the same variances σ2 and correlations p is:
+Var(y) is reduced via bagging. According to Bienaymé's formula, the variance of the mean of m random variables each with the same variances σ2 and correlations p is:
 
 ![Image of equation showing variance of the mean of N random variables as a function of N and their correlation](images/var_of_mean.PNG)
 
