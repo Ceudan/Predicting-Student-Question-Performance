@@ -26,7 +26,7 @@ The expected squared error loss can be broken down into the following terms usin
 
 ![Image of Equation showing Expected Squared error decomposed into bias, varience of y, and variance of t](images/bias_variance.png)
 
-Y represents the output of an algorithm, while T represents the correct label. Y and T are random variables, with uncertaintly in Y mostly coming from our choice of train data, and uncertainty in T coming from inaccuracies in the labelling process. Below is a visualization for 1 dimensional outputs.
+Y represents the output of an algorithm, while T represents the label. Y and T are random variables, with uncertaintly in Y mostly coming from our choice of train data, and uncertainty in T coming from inaccuracies in the labelling process. Below is a visualization for 1 dimensional outputs.
 
 ![Image of 2 labelled bell curves, 1 for Y and another for T](images/bias_variance_plot.png)
 
