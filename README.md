@@ -53,7 +53,7 @@ For bagging, we empirically found an optimal bag size of size 0.6\*N. Due to the
 
 ### K-Nearest Neighbors
 #### Theory
-KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who anwsered all the questions similarily, and average their response for that particular question. Mathematically, our algorithm will compute the nan euclidean distance of every sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
+KNN outputs the average response of the K nearest training examples, where K is an adjustable parameter. When imputing by user, the algorithm will look for the K nearest users who answered all the questions similarily, and average their response for that particular question. Mathematically, our algorithm will compute the nan euclidean distance of every sparse matrix row to the row of the query point. Rows missing the query question are ignored. Imputation by question follows the same procedure but by columns.
 
 ![Image of example calculation for nan euclidean distance](images/nan_distance.PNG)
 
