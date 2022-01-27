@@ -1,5 +1,5 @@
 # Predicting-Student-Question-Performance
-I led a team of 3 to write an ensemble machine learning model with bagging to predict whether a student can correctly anwser a diagnositic question. Our ensemble combined 3 distinct algorithms (K-Nearest Neighbors, Item-Response Theory, Autoencoder). Motivation was a course project. A generic guide was provided, however implementation details were left to the students.
+I led a team of 3 to write an ensemble machine learning model with bagging to predict whether a student can correctly anwser a diagnostic question. Our ensemble combined 3 distinct algorithms (K-Nearest Neighbors, Item-Response Theory, Autoencoder). Motivation was a course project. A generic guide was provided, however implementation details were left to the students.
 
 ## Background
 Online education services (such as Khan Academy) provide a broad audience with high quality content. However one disadvantage is that it is difficult to assess how well students are learning the material. In response, many services provide diagnostic questions to gauge performance on specific topics. The following software can be used to predict student performance on never seen before questions, given their performance on a subsample. This information can used be in a recommender system to suggest appropriate topics for the student to learn.
