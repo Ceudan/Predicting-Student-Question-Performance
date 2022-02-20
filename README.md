@@ -65,7 +65,7 @@ We found an optimal K-value of 11 when imputing by student, and 21 when imputing
 ### Item Response Theory
 This is a mathematical model that predicts a student's performance based on 2 parameters, student's ability θi, and question's difficulty βj. In total our model has to optimize 1774 + 542 parameters. Our loss function is the negative probability of observing the train matrix given the parameters P(C|θ, β). Calculation of gradients and parameter updating was done manually.
 
-![Image showing equations used in program](images/IRT_equation.PNG)
+![Image showing equations used in program](images/IRT_equation.png)
 
 ### Autoencoder
 #### Theory
